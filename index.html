@@ -1,19 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TodoList</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>TodoList</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1> Todo List</h1>
-<p>Welcome to this todo list. Double click to edit the todo</p>
-    <!-- Input and button to add new todos  -->
-     <input type="text" id="todo-input" placeholder="Enter a todo and press Add or Enter">
+  <div class="app">
+    <div class="card">
+      <header class="card-header">
+        <h1>Todo List</h1>
+        <p>Organize your day. Double-click a task to edit.</p>
+      </header>
 
-     <button id="add-btn">Add</button>
-     <ul id="todo-list"></ul>
-     <script src="script.js"></script>
+      <div class="input-row">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="Add a new task..."
+        />
+        <button id="add-btn">Add</button>
+      </div>
+
+      <div class="toolbar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search tasks..."
+        />
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">
+            All
+          </button>
+          <button class="filter-btn" data-filter="active">
+            Active
+          </button>
+          <button class="filter-btn" data-filter="completed">
+            Completed
+          </button>
+        </div>
+      </div>
+
+      <ul id="todo-list" class="todo-list"></ul>
+
+      <div class="card-footer">
+        <div class="status">
+          <span id="task-count">0 tasks</span>
+          <span id="completed-count">0 completed</span>
+        </div>
+        <div class="actions">
+          <button id="clear-completed" class="ghost-btn">
+            Clear Completed
+          </button>
+          <button id="clear-all" class="ghost-btn danger">
+            Clear All
+          </button>
+        </div>
+      </div>
+
+      <div id="empty-state" class="empty-state">
+        No tasks yet. Add something to get started ✨
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
