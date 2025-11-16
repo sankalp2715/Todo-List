@@ -39,6 +39,7 @@ This project allows users to add, edit, complete, and delete tasks, with **autom
 ```bash
 git clone https://github.com/sankalp2715/todo-list.git
 
+```
 
 ## 🎯 Purpose of the Project
 Perfect for beginners to learn:
